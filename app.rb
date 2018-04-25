@@ -12,7 +12,7 @@ class App < Sinatra::Base
   end
 
   post '/checkout' do
-    #binding.pry
+    @item_hash = params
     erb :checkout
   end
 
