@@ -16,7 +16,7 @@ class App < Sinatra::Base
   end
 
   post '/checkout' do
-    session[params.keys.flatten] = params[:item]
+    session[params.keys.join] = params[:item]
     @session = session
     binding.pry
     erb :checkout
