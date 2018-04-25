@@ -11,6 +11,7 @@ class App < Sinatra::Base
 
   get '/' do
     @session = session
+    binding.pry
     erb :index
   end
 
